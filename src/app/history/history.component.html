@@ -1,3 +1,18 @@
-<p>
-  history works!
-</p>
+<div class="container-fluid">
+
+  <p *ngIf="!allUser.length" class="text-center"> No Record Found !</p> 
+  <div class="row" *ngIf="allUser">
+    <div class="col-lg-4" *ngFor="let user of allUser ">
+      <div class="card text-left p-2 m-2" >
+        <div class="card-body">
+           <h4 class="card-title">{{user?.name | uppercase}}</h4>
+           <h6 class="time text-success">{{user?.date | date}}</h6>
+          <p>Who is the best cricketer in the world ?</p>
+          <p class="card-text text-primary">Ans: {{user?.quiz.quiz1}}</p>
+          <p>What are the colors in Indian national flag ?</p>
+          <p class="card-text text-primary">Ans: {{user?.quiz.quiz2}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@
     align-items: center;
 }
 
-.button{
+.btn{
     margin-top: 2em;
+    font-family: 'Nunito', sans-serif;
 }
